@@ -1,0 +1,130 @@
+<div class="card mt-3">
+  <div class="card-header text-white bg-info">
+    <h2>Vous pouvez entrer vos informations</h2>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="lastname">Nom</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          class="form-control"
+          placeholder="Nom"
+          required
+          [(ngModel)]="lastname"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="firstname">Prenom</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          class="form-control"
+          placeholder="Prenom"
+          required
+          [(ngModel)]="firstname"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="adress">Adresse</label>
+        <input
+          type="text"
+          id="adress"
+          name="adress"
+          class="form-control"
+          placeholder="Adresse"
+          required
+          [(ngModel)]="adress"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="city">Ville</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          class="form-control"
+          placeholder="Ville"
+          required
+          [(ngModel)]="city"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="zip">Code postal</label>
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          class="form-control"
+          placeholder="Code postal"
+          required
+          [(ngModel)]="zip"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="country">Pays</label>
+        <input
+          type="text"
+          id="country"
+          name="country"
+          class="form-control"
+          placeholder="Pays"
+          required
+          [(ngModel)]="country"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          placeholder="E-mail"
+          required
+          [(ngModel)]="email"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label class="px-2" for="civilite">Civilité</label>
+        <select
+          class="form-select"
+          id="civilite"
+          name="civilite"
+          required
+          [(ngModel)]="civilite"
+        >
+          <option value="Monsieur">Monsieur</option>
+          <option value="Madame">Madame</option>
+          <option value="Aucun">Aucun</option>
+        </select>
+      </div>
+
+      <button class="btn btn-info text-white" (click)="Show()">
+        Sauvegarder
+      </button>
+    </form>
+  </div>
+
+  <div class="card-body">
+    <div>
+      <div class="card-header text-white bg-info">
+        <h2>{{ title }}</h2>
+      </div>
+
+      <div class="mt-4" *ngIf="show">
+        <p class="px-2">Votre nom : {{ lastname }}</p>
+        <p class="px-2">Votre prenom : {{ firstname }}</p>
+        <p class="px-2">Votre adresse : {{ adress }}</p>
+        <p class="px-2">Votre ville : {{ city }}</p>
+        <p class="px-2">Le code postal de votre ville : {{ zip }}</p>
+        <p class="px-2">Vous vivez en : {{ country }}</p>
+        <p class="px-2">Votre e-mail : {{ email }}</p>
+        <p class="px-2">Votre civilité : {{ civilite }}</p>
+      </div>
+    </div>
+  </div>
+</div>
